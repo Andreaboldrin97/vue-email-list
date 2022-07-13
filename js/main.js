@@ -5,18 +5,18 @@ const app = new Vue({
         emailGroup : [],
     },
     methods : {
-        emailGenerator : (array)=>{
+        emailGenerator : function(array){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-            .then((response)=>{
+            .then(function(response){
                 console.log(response.data.response)
                 array.push(response.data.response) 
-                console.log(array)
             })
         },
-        generatorListEmail : ()=>{
+        generatorListEmail : function(){
             for (let index = 0; index < 10; index++) {
                 this.emailGenerator(this.emailGroup) 
             }
+            console.log(this.emailGroup)
         }
         
 
