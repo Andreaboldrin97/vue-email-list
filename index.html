@@ -15,17 +15,14 @@
     
 </head>
 <body>
-    <div class="container-fluid">
-        <div id="root" class="m-5">
-            <div class="text-center fs-1 text-white"
-            v-for="element in emailGroup"
-            v-if="emailGroup.length == 10">
+    <div class="container-fluid" id="root">
+        <div  class="m-5" v-if="emailGroup.length === 10">
+            <div class="text-center fs-1 text-white" v-for="element in emailGroup">
             {{ element }}
             </div>
-            <div class="text-center fs-1 text-white spinner"
-            v-else>
+        </div>
+        <div  v-else class="text-center fs-1 text-white spinner" >
             <i class="fa-solid fa-spinner"></i>
-            </div>
         </div>
     </div>
 
