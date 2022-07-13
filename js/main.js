@@ -15,7 +15,7 @@ const app = new Vue({
         },
         generatorListEmail : ()=>{
             for (let index = 0; index < 10; index++) {
-                this.emailGenerator() 
+                this.emailGenerator(this.emailGroup) 
             }
         }
         
